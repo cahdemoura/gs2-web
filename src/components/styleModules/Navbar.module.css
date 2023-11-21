@@ -1,0 +1,77 @@
+/* styles.module.css */
+
+.navbar {
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.title span {
+    color: var(--principalColor);
+    font-weight: 800;
+}
+
+.link {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.link:hover {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: var(--principalColor);
+    color: white;
+}
+
+.linkButton{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    transition: 0.3s all ease-in-out;
+    width: 25px;
+    border-radius: 8px;
+
+}
+
+.perfil:hover svg {
+    color: white;
+}
+
+.perfil:hover {
+    cursor: pointer;
+    background: rgb(0, 110, 255);
+    width: 100px;
+    transition: 0.3s all ease-in-out;
+    color: white;
+}
+
+.border{
+    border: 2px solid var(--principalColor);
+    border-radius: 25px;
+    width: 100%;
+    background: var(--principalColor);
+    margin: 16px 0;
+}

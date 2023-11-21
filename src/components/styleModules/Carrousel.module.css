@@ -1,0 +1,69 @@
+.containerCarrousel {
+    overflow: hidden;
+    position: relative;
+    border: 2px solid blue;
+    border-radius: 16px;
+}
+
+.carrouselFlex {
+    border: 2px solid red;
+    display: flex;
+    transition: 1s all ease-in-out;
+    /*transform: translateX(100%);*/
+}
+
+.buttonContianer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 40px;
+    padding: 4px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: var(--principalColor);
+    color: white;
+    border-radius: 50%;
+}
+
+.img {
+    display: block;
+    height: 512px;
+
+}
+
+.sliderFooterContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.sliderFooterContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+.slidePoints{
+    transition: 0.5s all ease-in-out;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 100%;
+    
+}
