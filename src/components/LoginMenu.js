@@ -1,18 +1,67 @@
 "use client";
-
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import style from "./styleModules/LoginMenu.module.css";
 
-const LoginMenu = () => {
+const url = 'http://localhost:3000/usuario';
+
+const LoginMenu = ({ userNow }) => {
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [usuarios, setUsuarios] = useState([])
+  const [autenticado, setAutenticado] = useState(false)
+  const [actualUser, setActualUser] = useState('')
+  const router = useRouter();
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      setUsuarios(data)
+    }
+    fetchData()
+  }, [])
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    
+    console.log('nome');
+    console.log(usuarios);
+    for (let i = 0; i < usuarios.length; i++) {
+      if (email == usuarios[i].email && password == usuarios[i].password) {
+        const rNome =usuarios[i].nome;
+        setNome(usuarios[i].nome)
+        console.log(rNome)
+        setAutenticado(true)
+        setActualUser(rNome)
+        userNow(actualUser,autenticado)
+        console.log("atual user:",actualUser)
+        return
+      }
+      else {
+        console.log("errou")
+        setAutenticado[false]
+      }
+    }
+    
     setEmail("");
     setPassword("");
   };
+
+  useEffect(() => {
+    // ...
+
+    if (autenticado) {
+      // Redireciona para a página desejada se autenticado for true
+      console.log('Esta autenticado')
+      //router.push('./'); // Substitua '/outra-pagina' pelo caminho da sua outra página
+
+    }
+  }, [autenticado]);
+
+
 
   return (
     <div className={style.container}>

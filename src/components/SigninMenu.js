@@ -2,19 +2,42 @@
 import { useState } from "react";
 import style from "./styleModules/SigninMenu.module.css";
 
+const url = 'http://localhost:3000/usuario';
+
 const SigninMenu = () => {
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(nome, email, password);
-    setNome("");
-    setEmail("");
-    setPassword("");
-  };
 
+    const usuario = {
+      nome,
+      email,
+      password
+    }
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(usuario)
+      })
+      
+      console.log(nome, email, password);
+      /* const teste = await res.json();*/
+      console.log(res);
+
+      setNome("");
+      setEmail("");
+      setPassword("");
+    }
+    catch (error) {
+      console.log('v')
+    }
+  }
   return (
     <div className={style.container}>
       <div className={style.loginContainer}>

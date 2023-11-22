@@ -2,11 +2,16 @@
 import Link from "next/link";
 import styled from "./styleModules/Navbar.module.css";
 import { UserCircle2 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({perfillogado}) => {
   const [button, setButton] = useState(false);
-  const [logado, setLogoado] = useState(true);
+  const[logado,setLogado]=useState(perfillogado);
+
+useEffect(()=>{
+  console.log('Navbar Verificando logado',logado)
+
+},[logado])
 
   return (
     <>
@@ -18,25 +23,25 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styled.menu}>
-          {!logado && (
+          {!perfillogado && (
             <Link className={styled.link} href={"./SignIn"}>
               Sign In
             </Link>
           )}
 
-          {!logado && (
+          {!perfillogado && (
             <Link className={styled.link} href={"./LogIn"}>
               Log In
             </Link>
           )}
 
-          {logado && (
+          {perfillogado && (
             <Link className={styled.link} href={"./SignIn"}>
               Inicio
             </Link>
           )}
 
-          {logado && (
+          {perfillogado && (
             <Link className={styled.link} href={"./SignIn"}>
               Logout
             </Link>
