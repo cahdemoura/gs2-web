@@ -1,15 +1,16 @@
 "use client";
-
 import { useState } from "react";
-import style from "./styleModules/LoginMenu.module.css";
+import style from "./styleModules/SigninMenu.module.css";
 
-const LoginMenu = () => {
+const SigninMenu = () => {
+  const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    console.log(nome, email, password);
+    setNome("");
     setEmail("");
     setPassword("");
   };
@@ -17,8 +18,17 @@ const LoginMenu = () => {
   return (
     <div className={style.container}>
       <div className={style.loginContainer}>
-        <h2>Login</h2>
+        <h2>Criar conta</h2>
         <form onSubmit={handleLogin}>
+          <label className={style.input}>
+            <span>Nome</span>
+            <input
+              type="text"
+              placeholder="fernando"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </label>
           <label className={style.input}>
             <span>Email</span>
             <input
@@ -41,12 +51,11 @@ const LoginMenu = () => {
           <input
             className={style.button}
             type="submit"
-            value={"Entrar"}
+            value={"Criar"}
           ></input>
         </form>
       </div>
     </div>
   );
 };
-
-export default LoginMenu;
+export default SigninMenu;
