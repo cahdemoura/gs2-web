@@ -1,14 +1,28 @@
 {
-    "usuario": [
-        {
-            "nome": "Michael",
-            "email": "mm@gmail.com",
-            "password": "5197@lA"
-        },
-        {
-            "nome": "Anna",
-            "email": "Anna@gmail.com",
-            "password": "9797@A"
-        }
-    ]
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Michael",
+      "email": "mm@gmail.com",
+      "password": "5197@lA"
+    },
+    {
+      "id": 2,
+      "nome": "Anna",
+      "email": "Anna@gmail.com",
+      "password": "9797@A"
+    },
+    {
+      "nome": "Bella",
+      "email": "B@gmail.com",
+      "password": "1111",
+      "id": 3
+    },
+    {
+      "nome": "peoepf",
+      "email": "ishdijsd@gmail.com",
+      "password": "1111",
+      "id": 4
+    }
+  ]
 }

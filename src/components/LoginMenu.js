@@ -37,6 +37,7 @@ const LoginMenu = ({ userNow }) => {
         setAutenticado(true)
         setActualUser(rNome)
         userNow(actualUser,autenticado)
+        sessionStorage.setItem('exampleMessage', actualUser);
         console.log("atual user:",actualUser)
         return
       }

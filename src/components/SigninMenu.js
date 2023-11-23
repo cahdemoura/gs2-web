@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import style from "./styleModules/SigninMenu.module.css";
 
 const url = 'http://localhost:3000/usuario';
@@ -8,7 +8,18 @@ const SigninMenu = () => {
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const[usuarios,setUsuarios]=useState();
 
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      setUsuarios(data)
+    }
+    fetchData()
+  }, [])
+  
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -27,7 +38,9 @@ const SigninMenu = () => {
       })
       
       console.log(nome, email, password);
-      /* const teste = await res.json();*/
+      const addUser = await res.json();
+      setUsuarios((prevUsers)=>[...prevUsers,addUser])
+
       console.log(res);
 
       setNome("");
