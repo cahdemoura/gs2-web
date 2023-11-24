@@ -4,6 +4,7 @@ import styled from '../LogIn/page.module.css'
 import Navbar from "@/components/Navbar";
 import '../globals.css'
 import { useState,useEffect } from 'react';
+import Rodape from '@/components/Rodape/Rodape';
 
 const LogIn = () => {
   const [logado, setLogado] = useState(false)
@@ -27,6 +28,7 @@ const LogIn = () => {
     <main className={'main'}>
       <Navbar perfillogado={logado} />
       <LoginMenu userNow={handleUser} />
+      <Rodape/>
     </main>
   );
 };
