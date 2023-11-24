@@ -1,0 +1,11 @@
+.diagnosticBar {
+    background-color: #f85454;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .diagnosticInfo {
+    font-size: 16px;
+  }

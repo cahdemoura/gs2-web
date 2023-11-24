@@ -1,5 +1,11 @@
 .mainSection {
     display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .sideMenu {
@@ -34,8 +40,18 @@
     background-color: gray;
 }
 
+.rightSideMenu{
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
 .diagnosticBar {
     background-color: #f85454;
+    border-radius: 8px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
