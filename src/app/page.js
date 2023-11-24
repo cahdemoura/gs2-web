@@ -12,7 +12,7 @@ export default function Home() {
     <main className={styles.main}>
       <Provider>
         <Navbar />
-        <Carrousel />
+        {/*<Carrousel />*/}
       </Provider>
     </main>
   )

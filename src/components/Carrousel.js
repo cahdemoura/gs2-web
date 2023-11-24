@@ -5,6 +5,7 @@ import style from "./styleModules/Carrousel.module.css"
 import { FaRegArrowAltCircleRight, FaRegArrowAltCircleLeft } from "react-icons/fa";
 
 const Carrousel = () => {
+    {/* 
     const [curr, setCurr] = useState(0);
     const prev = () => {
         setCurr(curr => curr == 0 ? slides.length - 1 : curr - 1)
@@ -52,6 +53,7 @@ const Carrousel = () => {
             Carrousel
         </div>
     )
+    */}
 }
 
 export default Carrousel
