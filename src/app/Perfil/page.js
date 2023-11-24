@@ -52,15 +52,15 @@ const Perfil = () => {
                         info.map((resultados) => (
                             <section key={resultados.id}>
                                 <h2>Lista de exames</h2>
-                            <div className={style.diagnosticBar} >
-                                <div className={style.diagnosticInfo}>
+                                <div className={style.diagnosticBar} >
+                                    <div className={style.diagnosticInfo}>
 
-                                    {info != '' && <p>Data: {resultados.data}</p>}
-                                    {info != '' && <p>Exame: {resultados.exame}</p>}
-                                    {info != '' && <p>Diagnostico: {resultados.diagnostico}</p>}
+                                        {info != '' && <p key={resultados.id}>Data: {resultados.data}</p>}
+                                        {info != '' && <p key={resultados.id}>Exame: {resultados.exame}</p>}
+                                        {info != '' && <p key={resultados.id}>Diagnostico: {resultados.diagnostico}</p>}
 
+                                    </div>
                                 </div>
-                            </div>
                             </section>
                         ))}
                 </div>
