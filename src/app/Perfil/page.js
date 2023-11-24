@@ -43,7 +43,6 @@ const Perfil = () => {
 
     const menuSelect2 = () => {
         setMenu(menuOpt[1])
-        console.log(diagnostico)
     }
 
     return (
