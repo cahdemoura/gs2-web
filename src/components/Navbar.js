@@ -17,7 +17,7 @@ useEffect(()=>{
     <>
       <nav className={styled.navbar}>
         <div className={styled.title}>
-          <Link href={"/"} className={styled.title}>
+          <Link href={""} className={styled.title}>
             {" "}
             skin<span>Guardian</span>
           </Link>

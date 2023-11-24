@@ -10,10 +10,10 @@ export default function Home() {
   const [user, setUser] = useState()
   return (
     <main className={styles.main}>
-      <Provider>
+
         <Navbar />
         {/*<Carrousel />*/}
-      </Provider>
+
     </main>
   )
 }
