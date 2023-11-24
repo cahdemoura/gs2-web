@@ -10,6 +10,7 @@
     "server": "json-server --watch data/db.json"
   },
   "dependencies": {
+    "js-cookie": "^3.0.5",
     "json-server": "^0.17.4",
     "lucide": "^0.292.0",
     "lucide-react": "^0.292.0",

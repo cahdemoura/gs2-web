@@ -24,5 +24,13 @@
       "password": "1111",
       "id": 4
     }
+  ],
+  "diagnosticos": [
+    {
+      "id": 1,
+      "data": "12/12/23",
+      "exame": "Exame de sangue",
+      "diagnostico": "Resultado normal"
+    }
   ]
 }

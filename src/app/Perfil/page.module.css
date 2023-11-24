@@ -1,0 +1,46 @@
+.mainSection {
+    display: flex;
+}
+
+.sideMenu {
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+
+
+}
+
+.sideMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+}
+
+.sideMenu ul li {
+    display: block;
+    list-style: none;
+    padding: 8px 32px;
+    margin-left: 16px;
+    width: 100%;
+}
+
+.sideMenu li:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.diagnosticBar {
+    background-color: #f85454;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .diagnosticInfo {
+    font-size: 16px;
+  }
