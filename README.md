@@ -5,13 +5,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1 - Abra o projeto dentro do vs code e abra o terminal (ctrl+')
+2 - Fala o download das dependencias: npm install
+3 - Execute o projeto: npm run dev
+4 - Enquanto o projeto é executado em um terminal, abra um novo terminal(ctrl+shift+')
+5 - Execute o servidor da API: npm run server
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
