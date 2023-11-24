@@ -26,8 +26,8 @@ const Carrousel = () => {
         <div className={style.app}>
             <div className={style.containerCarrousel}>
                 <div className={style.carrouselFlex} style={{ transform: `translateX(-${curr * 50}%)` }}>
-                    {slides.map((s) => (
-                        <img className={style.img} src={s}
+                    {slides.map((s,i) => (
+                        <img key={i} className={style.img} src={s}
                         />
                     ))}
                 </div>
