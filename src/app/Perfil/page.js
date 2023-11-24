@@ -50,9 +50,9 @@ const Perfil = () => {
                 <div className={style.rightSideMenu}>
                     {menu == 'exames' &&
                         info.map((resultados) => (
-                            <section>
+                            <section key={resultados.id}>
                                 <h2>Lista de exames</h2>
-                            <div className={style.diagnosticBar} key={resultados.id}>
+                            <div className={style.diagnosticBar} >
                                 <div className={style.diagnosticInfo}>
 
                                     {info != '' && <p>Data: {resultados.data}</p>}
