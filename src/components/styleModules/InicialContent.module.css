@@ -1,0 +1,31 @@
+.mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainContent img {
+    border-radius: 16px;
+}
+
+.textContent {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.textContent h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+.titleColor{
+    color: var(--principalColor);
+    font-weight: 800;
+}
+
+.textContent p{
+    text-align: justify;
+    margin-bottom: 8px;
+}

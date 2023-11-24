@@ -44,5 +44,19 @@
       "exame": "Ultrassom",
       "diagnostico": "Presença de massa suspeita"
     }
+  ],
+  "agendamentos": [
+    {
+      "id": 1,
+      "data": "10/01/2024",
+      "horario": "10:00",
+      "medico": "Dr. Silva"
+    },
+    {
+      "id": 2,
+      "data": "16/01/2024",
+      "horario": "14:30",
+      "medico": "Dra. Santos"
+    }
   ]
 }

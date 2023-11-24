@@ -57,7 +57,7 @@ const LoginMenu = ({ userNow }) => {
     if (autenticado) {
       // Redireciona para a página desejada se autenticado for true
       console.log('Esta autenticado')
-      //router.push('./'); // Substitua '/outra-pagina' pelo caminho da sua outra página
+      router.push('./Perfil'); // Substitua '/outra-pagina' pelo caminho da sua outra página
 
     }
   }, [autenticado]);
