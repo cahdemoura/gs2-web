@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './Rodape.module.css'
 
 const Rodape = () => {
     const teamMembers = [
@@ -11,10 +12,10 @@ const Rodape = () => {
       ]
     
     return (
-        <div className={}>
-        <ul className={}>
+        <div className={style.footer}>
+        <ul className={style.memberList}>
           {teamMembers.map((member, index) => (
-            <li key={index} className={}>
+            <li key={index} className={style.member}>
               <strong>{member.name}</strong> - RM: {member.rm} | Cargo: {member.role}
             </li>
           ))}
